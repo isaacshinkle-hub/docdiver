@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TEMPLATE — copy me to your-trip-slug.html — DocDiver</title>
+  <meta name="description" content="An adventure from Dr. Ting's travel journal.">
+  <link rel="canonical" href="https://docdiver.org/adventures/_template.html">
+  <meta property="og:title" content="TEMPLATE — copy me to your-trip-slug.html — DocDiver">
+  <meta property="og:description" content="An adventure from Dr. Ting's travel journal.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://docdiver.org/assets/img/avatar-square.jpg">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23d6323c'/%3E%3Cpath d='M4 4 L28 28' stroke='%23fff' stroke-width='7'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body data-root="../">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="brand" href="../index.html" aria-label="DocDiver home">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="6" fill="#d6323c"/><path d="M4 4 L28 28" stroke="#fff" stroke-width="7"/></svg>
+      <span>Doc<b>Diver</b></span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Menu">☰</button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../adventures.html" aria-current="page">Adventures</a></li>
+      <li><a href="../destinations.html">Dive Notes</a></li>
+      <li><a href="../tips.html">Tips</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a class="sister" href="https://doctrader.org/" title="Sister site: Dr. Ting's market notes">DocTrader ↗</a></li>
+    </ul>
+  </div>
+</header>
+<!-- title: TEMPLATE — copy me to your-trip-slug.html -->
+<!--
+  ============================================================
+  ADVENTURE TEMPLATE
+  1. Put photos in  images/<slug>/   (cover.jpg + the rest, ~1600px wide)
+  2. Copy this file to  adventures/<slug>.html
+  3. Change data-slug below to the same slug.
+  4. Fill in the sections. Delete what you don't need (video, facts, etc.).
+  5. Add an entry at the TOP of  data/adventures.js
+  6. Commit + push.
+  Photos: each <a href="full-size"> wrapping an <img src="same or smaller"> opens in the lightbox.
+  Add class="wide" to an <a> to make it span two columns. data-caption shows under the big view.
+  Videos: paste a YouTube/Vimeo embed URL into the iframe src; delete the placeholder div.
+  ============================================================
+-->
+<main id="main">
+  <section class="block">
+    <div class="wrap">
+      <article class="post" data-slug="your-trip-slug">
+        <header class="post-head">
+          <div class="post-kicker">Dive · Caribbean · <span id="post-dates"></span></div>
+          <h1>Trip title goes here</h1>
+          <div class="byline"><img class="avatar sm" src="../assets/img/avatar-face.png" alt=""><span><b>Dr. Ting</b>Where, and one line of feeling about it</span></div>
+        </header>
+
+        <figure class="cover"><img src="../images/your-trip-slug/cover.jpg" alt="Describe the cover photo"></figure>
+
+        <div class="facts-box">
+          <div><span>Where</span>Town, Country</div>
+          <div><span>Dives</span>12 over 5 days</div>
+          <div><span>Water</span>82°F · 3mm</div>
+          <div><span>Vis</span>80–100 ft</div>
+          <div><span>Operator</span>Name of shop</div>
+          <div><span>Stayed</span>Hotel / area</div>
+        </div>
+
+        <p>Opening paragraph: why this trip, what it felt like, the one moment you'll remember.</p>
+
+        <h2>The diving</h2>
+        <p>Sites, conditions, what you saw, what surprised you.</p>
+
+        <h2>Photos</h2>
+        <div class="gallery">
+          <a href="../images/your-trip-slug/photo1.jpg" data-caption="Caption for photo 1" class="wide"><img src="../images/your-trip-slug/photo1.jpg" alt="Photo 1" loading="lazy"></a>
+          <a href="../images/your-trip-slug/photo2.jpg" data-caption="Caption"><img src="../images/your-trip-slug/photo2.jpg" alt="Photo 2" loading="lazy"></a>
+          <a href="../images/your-trip-slug/photo3.jpg" data-caption="Caption"><img src="../images/your-trip-slug/photo3.jpg" alt="Photo 3" loading="lazy"></a>
+        </div>
+
+        <h2>Video</h2>
+        <div class="video">
+          <!-- Replace this div's contents with:  <iframe src="https://www.youtube-nocookie.com/embed/VIDEO_ID" title="…" loading="lazy" allowfullscreen></iframe> -->
+          <div class="placeholder"><div><b>Video coming</b>Paste a YouTube or Vimeo embed here.</div></div>
+        </div>
+
+        <h2>Above water</h2>
+        <p>Food, town, people, the non-diving day.</p>
+
+        <h2>What I'd do differently</h2>
+        <ul>
+          <li>One honest thing.</li>
+          <li>Another.</li>
+        </ul>
+
+        <h2>Practical notes</h2>
+        <ul>
+          <li><strong>Getting there:</strong> …</li>
+          <li><strong>Cost:</strong> rough numbers help future you.</li>
+          <li><strong>Bring:</strong> …</li>
+        </ul>
+
+        <nav class="post-nav" id="post-nav" aria-label="Older and newer adventures"></nav>
+        <p class="small" style="margin-top:14px"><a href="../adventures.html">← All adventures</a></p>
+      </article>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h4>DocDiver</h4>
+        <p>Dr. Ting's adventure journal: dive trips and travels around the world, with photos, videos, and the practical notes she wishes someone had given her first.</p>
+      </div>
+      <div>
+        <h4>Site</h4>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../adventures.html">Adventures</a></li>
+          <li><a href="../destinations.html">Dive destination notes</a></li>
+          <li><a href="../tips.html">Tips &amp; skills</a></li>
+          <li><a href="../about.html">About &amp; contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Elsewhere</h4>
+        <ul>
+          <li><a href="https://doctrader.org/">DocTrader — her market notes ↗</a></li>
+          <li><a href="../about.html#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year">2026</span> Dr. Ting · docdiver.org</span>
+      <span>Dive within your training. Plan your dive, dive your plan.</span>
+    </div>
+  </div>
+</footer>
+<script src="../data/adventures.js"></script>
+<script src="../assets/site.js"></script>
+</body>
+</html>
