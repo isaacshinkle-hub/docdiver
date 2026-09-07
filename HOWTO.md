@@ -26,7 +26,15 @@ Amber pins on the home page come from `WISHLIST` at the bottom of `data/adventur
 
 ## Change the avatar
 
-Replace `assets/img/avatar.png` (large, transparent background works best), `assets/img/avatar-face.png` (small circle for bylines), and `assets/img/avatar-square.jpg` (social preview). Same filenames, nothing else to touch.
+There are three looks. Keep all of them; the site rotates them.
+
+- `assets/img/avatar-opt-1.png` — teal studio (hero). Also copied to `avatar.png`.
+- `assets/img/avatar-opt-2.png` — underwater bokeh (Adventures / Dive Notes / About).
+- `assets/img/avatar-opt-3.png` — charcoal studio (Tips / trip bylines).
+- Face crops: `avatar-opt-{1,2,3}-face.png`. `avatar-face.png` is the opt-1 crop (bylines).
+- `assets/img/avatar-square.jpg` — social preview, from opt-1.
+
+Same filenames, nothing else to touch unless you add a new look.
 
 ## Edit Dive Notes / Tips / About
 

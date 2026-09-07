@@ -4,9 +4,27 @@
   'use strict';
 
   var t = document.querySelector('.nav-toggle'), n = document.getElementById('nav-links');
-  if (t && n) t.addEventListener('click', function () {
-    var open = n.classList.toggle('open'); t.setAttribute('aria-expanded', open);
-  });
+  if (t && n) {
+    function setOpen(open) {
+      n.classList.toggle('open', open);
+      t.setAttribute('aria-expanded', open);
+      t.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      document.body.classList.toggle('nav-open', open);
+    }
+    t.addEventListener('click', function (e) {
+      e.stopPropagation();
+      setOpen(!n.classList.contains('open'));
+    });
+    n.addEventListener('click', function (e) {
+      if (e.target.closest('a')) setOpen(false);
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && n.classList.contains('open')) { setOpen(false); t.focus(); }
+    });
+    document.addEventListener('click', function (e) {
+      if (n.classList.contains('open') && !e.target.closest('.site-header')) setOpen(false);
+    });
+  }
   var y = document.getElementById('year'); if (y) y.textContent = new Date().getFullYear();
 
   var MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
@@ -100,12 +118,20 @@
   /* Lightbox for .gallery a[href] */
   var links = Array.prototype.slice.call(document.querySelectorAll('.gallery a[href]'));
   if (links.length) {
-    var lb = document.createElement('div'); lb.className = 'lb'; lb.setAttribute('role', 'dialog'); lb.setAttribute('aria-label', 'Photo viewer');
-    lb.innerHTML = '<button class="close" aria-label="Close">×</button><button class="prev" aria-label="Previous">‹</button><img alt=""><button class="next" aria-label="Next">›</button><div class="cap"></div>';
+    var lb = document.createElement('div'); lb.className = 'lb'; lb.setAttribute('role', 'dialog'); lb.setAttribute('aria-modal', 'true'); lb.setAttribute('aria-label', 'Photo viewer');
+    lb.innerHTML = '<button class="close" type="button" aria-label="Close">×</button><button class="prev" type="button" aria-label="Previous">‹</button><img alt=""><button class="next" type="button" aria-label="Next">›</button><div class="cap"></div>';
     document.body.appendChild(lb);
-    var img = lb.querySelector('img'), cap = lb.querySelector('.cap'), i = 0;
-    function show(k) { i = (k + links.length) % links.length; img.src = links[i].getAttribute('href'); cap.textContent = links[i].getAttribute('data-caption') || links[i].querySelector('img').alt || ''; lb.classList.add('open'); }
-    function hide() { lb.classList.remove('open'); img.src = ''; }
+    var img = lb.querySelector('img'), cap = lb.querySelector('.cap'), i = 0, lastFocus = null;
+    function show(k) {
+      lastFocus = document.activeElement;
+      i = (k + links.length) % links.length;
+      img.src = links[i].getAttribute('href');
+      img.alt = links[i].querySelector('img').alt || '';
+      cap.textContent = links[i].getAttribute('data-caption') || img.alt || '';
+      lb.classList.add('open');
+      lb.querySelector('.close').focus();
+    }
+    function hide() { lb.classList.remove('open'); img.src = ''; img.alt = ''; if (lastFocus && lastFocus.focus) lastFocus.focus(); }
     links.forEach(function (l, k) { l.addEventListener('click', function (e) { e.preventDefault(); show(k); }); });
     lb.querySelector('.close').addEventListener('click', hide);
     lb.querySelector('.prev').addEventListener('click', function () { show(i - 1); });
