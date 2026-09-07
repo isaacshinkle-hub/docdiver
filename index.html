@@ -3,6 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#03141c">
+  <meta name="color-scheme" content="dark">
   <title>DocDiver — Dr. Ting's adventures</title>
   <meta name="description" content="Dr. Ting's adventure journal: scuba trips and travels around the world, with photos, videos, stories, and practical dive notes.">
   <link rel="canonical" href="https://docdiver.org/">
@@ -11,7 +13,10 @@
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://docdiver.org/assets/img/avatar-square.jpg">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23d6323c'/%3E%3Cpath d='M4 4 L28 28' stroke='%23fff' stroke-width='7'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="style.css">
+  <link rel="preload" as="image" href="assets/img/avatar.png">
 </head>
 <body data-root="">
 <a class="skip" href="#main">Skip to content</a>
@@ -21,14 +26,14 @@
       <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="6" fill="#d6323c"/><path d="M4 4 L28 28" stroke="#fff" stroke-width="7"/></svg>
       <span>Doc<b>Diver</b></span>
     </a>
-    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Menu">☰</button>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu"><span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span></button>
     <ul class="nav-links" id="nav-links">
       <li><a href="index.html" aria-current="page">Home</a></li>
       <li><a href="adventures.html">Adventures</a></li>
       <li><a href="destinations.html">Dive Notes</a></li>
       <li><a href="tips.html">Tips</a></li>
       <li><a href="about.html">About</a></li>
-      <li><a class="sister" href="https://doctrader.org/" title="Sister site: Dr. Ting's market notes">DocTrader ↗</a></li>
+      <li><a class="sister" href="https://doctrader.org/" rel="noopener noreferrer" title="Sister site: Dr. Ting's market notes">DocTrader ↗</a></li>
     </ul>
   </div>
 </header>
@@ -38,7 +43,7 @@
     <div class="bubbles" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
     <div class="wrap hero-row">
       <div>
-        <span class="eyebrow">Dr. Ting's adventure journal</span>
+        <span class="eyebrow"><svg class="motif" viewBox="0 0 128 64" aria-hidden="true"><path d="M4 38c12-14 32-22 52-18l12-14 6 16c8 6 16 12 22 18l18-12c6-4 12 0 10 6L96 42c-4 10-20 18-40 16S30 48 22 40c-8 8-16 8-20 2 6-2 10-4 12-6-4 2-8 2-10 2z"/></svg>Dr. Ting's adventure journal</span>
         <h1>Go see the world. Bring a mask.</h1>
         <p class="lede">Dive trips and adventures around the world — the photos, the videos, the stories, and the practical notes I wish someone had handed me before I booked. A travel journal, not a booking engine.</p>
         <div class="actions">
@@ -46,16 +51,50 @@
           <a class="btn ghost" href="destinations.html">Dive destination notes</a>
         </div>
         <div class="byline" style="margin-top:22px">
-          <img class="avatar sm" src="assets/img/avatar-face.png" alt="">
+          <img class="avatar sm" src="assets/img/avatar-face.png" alt="" width="44" height="44">
           <span><b>Dr. Ting</b>Physician · diver · traveler</span>
         </div>
       </div>
-      <img class="avatar lg" src="assets/img/avatar.png" alt="Dr. Ting in a lab coat with a dive mask and snorkel" width="240" height="240">
+      <img class="avatar lg" src="assets/img/avatar.png" alt="Dr. Ting in a lab coat with a dive mask and snorkel on her head" width="260" height="260" fetchpriority="high">
     </div>
-    <svg class="waves" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true">
-      <path d="M0,40 C240,90 480,0 720,40 C960,80 1200,10 1440,40 L1440,90 L0,90 Z" fill="rgba(47,214,194,0.08)"/>
-      <path d="M0,60 C240,20 480,90 720,55 C960,20 1200,80 1440,50 L1440,90 L0,90 Z" fill="rgba(47,214,194,0.12)"/>
+    <svg class="hero-life" viewBox="0 0 1440 90" preserveAspectRatio="xMidYMax meet" aria-hidden="true">
+      <g class="mahi" transform="translate(168,28) scale(1.15)"><path d="M4 32 16 6c8-4 16 0 24 8 14-10 38-8 58 4l20-14-10 18 14 6-14 4 10 16c-26-8-54-6-78-4L18 48 4 32z"/></g>
+      <g class="tuna" transform="translate(620,36) scale(0.95)"><path d="M6 30c16-14 42-16 64-6l10-20 6 20 20-14-12 16 16 2-16 4 12 18-12-12-10 18C52 44 26 42 10 36 4 40 2 34 6 30z"/></g>
+      <g class="dolphin" transform="translate(1040,8) scale(1.2)"><path d="M4 38c12-14 32-22 52-18l12-14 6 16c8 6 16 12 22 18l18-12c6-4 12 0 10 6L96 42c-4 10-20 18-40 16S30 48 22 40c-8 8-16 8-20 2 6-2 10-4 12-6-4 2-8 2-10 2z"/></g>
     </svg>
+    <svg class="waves" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0,40 C240,90 480,0 720,40 C960,80 1200,10 1440,40 L1440,90 L0,90 Z" fill="rgba(46,200,184,0.08)"/>
+      <path d="M0,60 C240,20 480,90 720,55 C960,20 1200,80 1440,50 L1440,90 L0,90 Z" fill="rgba(10,77,110,0.35)"/>
+    </svg>
+  </section>
+
+  <section class="block" aria-labelledby="looks-heading">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="looks-heading">Three looks, one dive doctor</h2>
+        <p><a href="avatars.html">Portrait gallery →</a></p>
+      </div>
+      <ul class="look-trio">
+        <li>
+          <a href="avatars.html#studio">
+            <img src="assets/img/avatar-opt-1.png" alt="Studio teal portrait: lab coat, stethoscope, mask and snorkel" width="400" height="400" loading="lazy">
+            <span class="cap"><strong>Studio teal</strong>The hero look — mask up, coat on.</span>
+          </a>
+        </li>
+        <li>
+          <a href="avatars.html#reef">
+            <img src="assets/img/avatar-opt-2.png" alt="Underwater portrait of Dr. Ting against teal bokeh and bubbles" width="400" height="400" loading="lazy">
+            <span class="cap"><strong>Under the surface</strong>Reef light, bubbles, same notebook.</span>
+          </a>
+        </li>
+        <li>
+          <a href="avatars.html#charcoal">
+            <img src="assets/img/avatar-opt-3.png" alt="Charcoal studio portrait of Dr. Ting in a lab coat and dive mask" width="400" height="400" loading="lazy">
+            <span class="cap"><strong>Charcoal studio</strong>High contrast, still the dive doctor.</span>
+          </a>
+        </li>
+      </ul>
+    </div>
   </section>
 
   <section class="block">
@@ -119,7 +158,7 @@
           <h3>Back on dry land: <b>DocTrader</b></h3>
           <p>My other notebook — a live stock dashboard, a morning market update every trading day, and the rules I trade by. Not financial advice.</p>
         </div>
-        <a class="btn gold" href="https://doctrader.org/">Visit DocTrader ↗</a>
+        <a class="btn gold" href="https://doctrader.org/" rel="noopener noreferrer">Visit DocTrader ↗</a>
       </div>
     </div>
   </section>
@@ -140,12 +179,13 @@
           <li><a href="destinations.html">Dive destination notes</a></li>
           <li><a href="tips.html">Tips &amp; skills</a></li>
           <li><a href="about.html">About &amp; contact</a></li>
+          <li><a href="avatars.html">Portraits</a></li>
         </ul>
       </div>
       <div>
         <h4>Elsewhere</h4>
         <ul>
-          <li><a href="https://doctrader.org/">DocTrader — her market notes ↗</a></li>
+          <li><a href="https://doctrader.org/" rel="noopener noreferrer">DocTrader — her market notes ↗</a></li>
           <li><a href="about.html#contact">Contact</a></li>
         </ul>
       </div>

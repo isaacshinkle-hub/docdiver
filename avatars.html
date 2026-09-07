@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#03141c">
   <meta name="color-scheme" content="dark">
-  <title>Adventures — DocDiver</title>
-  <meta name="description" content="Every trip Dr. Ting has written up: dives, treks, cities, road trips — with photos and videos.">
-  <link rel="canonical" href="https://docdiver.org/adventures.html">
-  <meta property="og:title" content="Adventures — DocDiver">
-  <meta property="og:description" content="Every trip Dr. Ting has written up: dives, treks, cities, road trips — with photos and videos.">
+  <title>Portraits — DocDiver</title>
+  <meta name="description" content="The three DocDiver looks: studio teal, underwater, and charcoal — full portraits and face crops of Dr. Ting.">
+  <link rel="canonical" href="https://docdiver.org/avatars.html">
+  <meta property="og:title" content="Portraits — DocDiver">
+  <meta property="og:description" content="The three DocDiver looks: studio teal, underwater, and charcoal.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://docdiver.org/assets/img/avatar-square.jpg">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23d6323c'/%3E%3Cpath d='M4 4 L28 28' stroke='%23fff' stroke-width='7'/%3E%3C/svg%3E">
@@ -28,7 +28,7 @@
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu"><span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span></button>
     <ul class="nav-links" id="nav-links">
       <li><a href="index.html">Home</a></li>
-      <li><a href="adventures.html" aria-current="page">Adventures</a></li>
+      <li><a href="adventures.html">Adventures</a></li>
       <li><a href="destinations.html">Dive Notes</a></li>
       <li><a href="tips.html">Tips</a></li>
       <li><a href="about.html">About</a></li>
@@ -38,36 +38,45 @@
 </header>
 <main id="main">
   <div class="page-head">
-    <div class="wrap page-head-row">
-      <div>
-        <div class="section-head" style="margin-bottom:0">
-          <div>
-            <h1>Adventures</h1>
-            <p>Every trip, written up the same way: where, when, what it was like, the photos, the videos, and what I'd do differently.</p>
-          </div>
-          <p class="small muted" id="adv-count"></p>
-        </div>
-      </div>
-      <img class="avatar md" src="assets/img/avatar-opt-2-face.png" alt="" width="96" height="96">
+    <div class="wrap">
+      <h1>Portraits</h1>
+      <p>Three looks for the same dive doctor: a teal studio, an underwater backlight, and a charcoal still. The home hero uses the first; the rest of the journal rotates the others.</p>
     </div>
   </div>
 
   <section class="block">
     <div class="wrap">
-      <div class="filters" id="filter-type" role="group" aria-label="Filter by type"></div>
-      <div class="filters" id="filter-region" role="group" aria-label="Filter by region"></div>
-      <div id="adventure-grid" class="adv-grid"></div>
-    </div>
-  </section>
-
-  <section class="block">
-    <div class="wrap">
-      <div class="sister-banner">
-        <div>
-          <h3>Off-gassing? <b>DocTrader</b> is the other notebook.</h3>
-          <p>A live stock dashboard, a morning market update every trading day, and my trading playbook. Not financial advice.</p>
-        </div>
-        <a class="btn gold" href="https://doctrader.org/" rel="noopener noreferrer">Visit DocTrader ↗</a>
+      <div class="portrait-grid">
+        <article class="portrait-card" id="studio">
+          <img src="assets/img/avatar-opt-1.png" alt="Studio teal portrait of Dr. Ting in a lab coat with a dive mask and snorkel" width="800" height="800">
+          <div class="body">
+            <h2>Studio teal</h2>
+            <p class="muted">Lab coat, stethoscope, mask and snorkel on her head. This is the hero portrait and the social preview.</p>
+            <div class="faces-row">
+              <img src="assets/img/avatar-opt-1-face.png" alt="Face crop of the studio teal portrait" width="88" height="88">
+            </div>
+          </div>
+        </article>
+        <article class="portrait-card" id="reef">
+          <img src="assets/img/avatar-opt-2.png" alt="Underwater portrait of Dr. Ting against teal bokeh and bubbles" width="800" height="800">
+          <div class="body">
+            <h2>Under the surface</h2>
+            <p class="muted">Same coat, reef light. Used on Adventures, Dive Notes, and About.</p>
+            <div class="faces-row">
+              <img src="assets/img/avatar-opt-2-face.png" alt="Face crop of the underwater portrait" width="88" height="88">
+            </div>
+          </div>
+        </article>
+        <article class="portrait-card" id="charcoal">
+          <img src="assets/img/avatar-opt-3.png" alt="Charcoal studio portrait of Dr. Ting in a lab coat and dive mask" width="800" height="800">
+          <div class="body">
+            <h2>Charcoal studio</h2>
+            <p class="muted">High-contrast still. Shows up on Tips and in trip bylines.</p>
+            <div class="faces-row">
+              <img src="assets/img/avatar-opt-3-face.png" alt="Face crop of the charcoal portrait" width="88" height="88">
+            </div>
+          </div>
+        </article>
       </div>
     </div>
   </section>
@@ -87,7 +96,7 @@
           <li><a href="destinations.html">Dive destination notes</a></li>
           <li><a href="tips.html">Tips &amp; skills</a></li>
           <li><a href="about.html">About &amp; contact</a></li>
-          <li><a href="avatars.html">Portraits</a></li>
+          <li><a href="avatars.html" aria-current="page">Portraits</a></li>
         </ul>
       </div>
       <div>

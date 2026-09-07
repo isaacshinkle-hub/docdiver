@@ -3,6 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#03141c">
+  <meta name="color-scheme" content="dark">
   <title>Welcome to the adventure journal — DocDiver</title>
   <meta name="description" content="An adventure from Dr. Ting's travel journal.">
   <link rel="canonical" href="https://docdiver.org/adventures/welcome.html">
@@ -11,6 +13,8 @@
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://docdiver.org/assets/img/avatar-square.jpg">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23d6323c'/%3E%3Cpath d='M4 4 L28 28' stroke='%23fff' stroke-width='7'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="../style.css">
 </head>
 <body data-root="../">
@@ -21,14 +25,14 @@
       <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="6" fill="#d6323c"/><path d="M4 4 L28 28" stroke="#fff" stroke-width="7"/></svg>
       <span>Doc<b>Diver</b></span>
     </a>
-    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Menu">☰</button>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu"><span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span></button>
     <ul class="nav-links" id="nav-links">
       <li><a href="../index.html">Home</a></li>
       <li><a href="../adventures.html" aria-current="page">Adventures</a></li>
       <li><a href="../destinations.html">Dive Notes</a></li>
       <li><a href="../tips.html">Tips</a></li>
       <li><a href="../about.html">About</a></li>
-      <li><a class="sister" href="https://doctrader.org/" title="Sister site: Dr. Ting's market notes">DocTrader ↗</a></li>
+      <li><a class="sister" href="https://doctrader.org/" rel="noopener noreferrer" title="Sister site: Dr. Ting's market notes">DocTrader ↗</a></li>
     </ul>
   </div>
 </header>
@@ -40,7 +44,7 @@
         <header class="post-head">
           <div class="post-kicker">Journal · <span id="post-dates"></span></div>
           <h1>Welcome to the adventure journal</h1>
-          <div class="byline"><img class="avatar sm" src="../assets/img/avatar-face.png" alt=""><span><b>Dr. Ting</b>Physician, diver, traveler — in roughly that order on weekdays</span></div>
+          <div class="byline"><img class="avatar sm" src="../assets/img/avatar-opt-3-face.png" alt="" width="44" height="44"><span><b>Dr. Ting</b>Physician, diver, traveler — in roughly that order on weekdays</span></div>
         </header>
 
         <figure class="cover"><img src="../images/welcome/cover.jpg" alt="Placeholder: sunlight through the surface"><figcaption>Placeholder image — real photos replace these as trips get written up.</figcaption></figure>
@@ -79,7 +83,7 @@
         <p>Socorro for the mantas, Raja Ampat because everyone who's been won't stop talking about it, Little Cayman for Bloody Bay Wall, the Galápagos for hammerheads, and Palau for Blue Corner. They're on the <a href="../index.html">home page</a> as amber pins until they turn teal.</p>
 
         <h2>Meanwhile</h2>
-        <p>The <a href="../destinations.html">dive destination notes</a> and <a href="../tips.html">tips &amp; skills</a> pages are already useful whether or not I've posted a trip there yet. And when I'm on dry land during market hours, I'm probably at <a href="https://doctrader.org/">DocTrader</a>.</p>
+        <p>The <a href="../destinations.html">dive destination notes</a> and <a href="../tips.html">tips &amp; skills</a> pages are already useful whether or not I've posted a trip there yet. And when I'm on dry land during market hours, I'm probably at <a href="https://doctrader.org/" rel="noopener noreferrer">DocTrader</a>.</p>
 
         <nav class="post-nav" id="post-nav" aria-label="Older and newer adventures"></nav>
         <p class="small" style="margin-top:14px"><a href="../adventures.html">← All adventures</a></p>
@@ -102,12 +106,13 @@
           <li><a href="../destinations.html">Dive destination notes</a></li>
           <li><a href="../tips.html">Tips &amp; skills</a></li>
           <li><a href="../about.html">About &amp; contact</a></li>
+          <li><a href="../avatars.html">Portraits</a></li>
         </ul>
       </div>
       <div>
         <h4>Elsewhere</h4>
         <ul>
-          <li><a href="https://doctrader.org/">DocTrader — her market notes ↗</a></li>
+          <li><a href="https://doctrader.org/" rel="noopener noreferrer">DocTrader — her market notes ↗</a></li>
           <li><a href="../about.html#contact">Contact</a></li>
         </ul>
       </div>

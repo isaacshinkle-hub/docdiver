@@ -3,6 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#03141c">
+  <meta name="color-scheme" content="dark">
   <title>Dive Destination Notes — DocDiver</title>
   <meta name="description" content="Practical notes on dive destinations: seasons, conditions, logistics, operators, and what to know before you book.">
   <link rel="canonical" href="https://docdiver.org/destinations.html">
@@ -11,6 +13,8 @@
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://docdiver.org/assets/img/avatar-square.jpg">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23d6323c'/%3E%3Cpath d='M4 4 L28 28' stroke='%23fff' stroke-width='7'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="style.css">
 </head>
 <body data-root="">
@@ -21,22 +25,25 @@
       <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="6" fill="#d6323c"/><path d="M4 4 L28 28" stroke="#fff" stroke-width="7"/></svg>
       <span>Doc<b>Diver</b></span>
     </a>
-    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Menu">☰</button>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu"><span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span></button>
     <ul class="nav-links" id="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="adventures.html">Adventures</a></li>
       <li><a href="destinations.html" aria-current="page">Dive Notes</a></li>
       <li><a href="tips.html">Tips</a></li>
       <li><a href="about.html">About</a></li>
-      <li><a class="sister" href="https://doctrader.org/" title="Sister site: Dr. Ting's market notes">DocTrader ↗</a></li>
+      <li><a class="sister" href="https://doctrader.org/" rel="noopener noreferrer" title="Sister site: Dr. Ting's market notes">DocTrader ↗</a></li>
     </ul>
   </div>
 </header>
 <main id="main">
   <div class="page-head">
-    <div class="wrap">
-      <h1>Dive destination notes</h1>
-      <p>Practical notes on places worth diving — what the diving is like, when to go, how to get there, and how to pick an operator. Trip write-ups with photos live under <a href="adventures.html">Adventures</a>; these are the reference notes.</p>
+    <div class="wrap page-head-row">
+      <div>
+        <h1>Dive destination notes</h1>
+        <p>Practical notes on places worth diving — what the diving is like, when to go, how to get there, and how to pick an operator. Trip write-ups with photos live under <a href="adventures.html">Adventures</a>; these are the reference notes.</p>
+      </div>
+      <img class="avatar md" src="assets/img/avatar-opt-2-face.png" alt="" width="96" height="96">
     </div>
   </div>
 
@@ -189,10 +196,10 @@
         <p>Places I'm researching. They get full notes once I've dived them, and a trip write-up under Adventures.</p>
       </div>
       <div class="grid">
-        <article class="card"><h3>Socorro (Revillagigedo)</h3><p class="meta">Liveaboard · Nov–May</p><p>Mantas, dolphins, big animals, long crossing. Advanced conditions and a real budget line.</p></article>
-        <article class="card"><h3>Raja Ampat</h3><p class="meta">Liveaboard or resort · Oct–Apr</p><p>The biodiversity benchmark. Long flights, worth planning a year out.</p></article>
-        <article class="card"><h3>Little Cayman</h3><p class="meta">Resort · Year-round</p><p>Bloody Bay Wall. Small island, small boats, no nightlife — which is the point.</p></article>
-        <article class="card"><h3>Channel Islands, CA</h3><p class="meta">Boat · Aug–Oct</p><p>The next step after Monterey. Multi-day boats out of Ventura and Santa Barbara.</p></article>
+        <article class="card motif-dolphin"><h3>Socorro (Revillagigedo)</h3><p class="meta">Liveaboard · Nov–May</p><p>Mantas, dolphins, big animals, long crossing. Advanced conditions and a real budget line.</p></article>
+        <article class="card motif-mahi"><h3>Raja Ampat</h3><p class="meta">Liveaboard or resort · Oct–Apr</p><p>The biodiversity benchmark. Long flights, worth planning a year out.</p></article>
+        <article class="card motif-tuna"><h3>Little Cayman</h3><p class="meta">Resort · Year-round</p><p>Bloody Bay Wall. Small island, small boats, no nightlife — which is the point.</p></article>
+        <article class="card motif-tuna"><h3>Channel Islands, CA</h3><p class="meta">Boat · Aug–Oct</p><p>The next step after Monterey. Multi-day boats out of Ventura and Santa Barbara.</p></article>
       </div>
     </div>
   </section>
@@ -204,7 +211,7 @@
           <h3>Off-gassing between trips? <b>DocTrader</b> is the other notebook.</h3>
           <p>Market notes, a public watchlist, and videos. Not financial advice.</p>
         </div>
-        <a class="btn gold" href="https://doctrader.org/">Visit DocTrader ↗</a>
+        <a class="btn gold" href="https://doctrader.org/" rel="noopener noreferrer">Visit DocTrader ↗</a>
       </div>
     </div>
   </section>
@@ -224,12 +231,13 @@
           <li><a href="destinations.html">Dive destination notes</a></li>
           <li><a href="tips.html">Tips &amp; skills</a></li>
           <li><a href="about.html">About &amp; contact</a></li>
+          <li><a href="avatars.html">Portraits</a></li>
         </ul>
       </div>
       <div>
         <h4>Elsewhere</h4>
         <ul>
-          <li><a href="https://doctrader.org/">DocTrader — her market notes ↗</a></li>
+          <li><a href="https://doctrader.org/" rel="noopener noreferrer">DocTrader — her market notes ↗</a></li>
           <li><a href="about.html#contact">Contact</a></li>
         </ul>
       </div>
