@@ -42,7 +42,7 @@
   var root = document.body.getAttribute('data-root') || '';
 
   /* placeholder cover: teal gradient with a wave, as a data URI */
-  var PH = "data:image/svg+xml," + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0a4d6e"/><stop offset="1" stop-color="#03141c"/></linearGradient></defs><rect width="800" height="500" fill="url(#g)"/><path d="M0,330 C150,300 250,370 400,340 C550,310 650,380 800,350 L800,500 L0,500 Z" fill="rgba(46,200,184,0.10)"/><path d="M0,380 C150,350 250,420 400,390 C550,360 650,430 800,400 L800,500 L0,500 Z" fill="rgba(46,200,184,0.14)"/><path d="M560 150c28-18 56-16 80 4 16-8 32-4 40 8-12 6-20 8-32 4-4 12-20 20-40 16-20 4-36-4-44-16-4 4-12 4-16 0 8-4 12-8 12-16z" fill="rgba(58,212,197,0.16)"/></svg>');
+  var PH = "data:image/svg+xml," + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0a4d6e"/><stop offset="1" stop-color="#03141c"/></linearGradient></defs><rect width="800" height="500" fill="url(#g)"/><path d="M0,330 C150,300 250,370 400,340 C550,310 650,380 800,350 L800,500 L0,500 Z" fill="rgba(46,200,184,0.10)"/><path d="M0,380 C150,350 250,420 400,390 C550,360 650,430 800,400 L800,500 L0,500 Z" fill="rgba(46,200,184,0.14)"/><g fill="rgba(58,212,197,0.20)" transform="translate(520 120) scale(1.6)"><path d="M6 30c16-14 42-16 64-6l10-20 6 20 20-14-12 16 16 2-16 4 12 18-12-12-10 18C52 44 26 42 10 36 4 40 2 34 6 30z"/></g></svg>');
 
   function card(a, featured) {
     var cover = a.cover ? root + a.cover : PH;
@@ -72,7 +72,7 @@
       var shown = all.filter(function (a) { return (curT === 'all' || a.type === curT) && (curR === 'all' || a.region === curR); });
       var feat = (curT === 'all' && curR === 'all') ? shown.filter(function (a) { return a.featured; })[0] : null;
       grid.innerHTML = (feat ? card(feat, true) : '') + shown.filter(function (a) { return a !== feat; }).map(function (a) { return card(a, false); }).join('') ||
-        '<p class="muted">Nothing here yet for that combination.</p>';
+        '<div class="empty-marine"><svg viewBox="0 0 128 64" aria-hidden="true"><path d="M4 38c12-14 32-22 52-18l12-14 6 16c8 6 16 12 22 18l18-12c6-4 12 0 10 6L96 42c-4 10-20 18-40 16S30 48 22 40c-8 8-16 8-20 2 6-2 10-4 12-6-4 2-8 2-10 2z"/></svg><p class="muted">Nothing here yet for that combination.</p></div>';
       var c = document.getElementById('adv-count'); if (c) c.textContent = shown.length + (shown.length === 1 ? ' adventure' : ' adventures');
     }
     function wire(el, set) {
