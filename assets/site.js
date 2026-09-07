@@ -42,7 +42,7 @@
   var root = document.body.getAttribute('data-root') || '';
 
   /* placeholder cover: teal gradient with a wave, as a data URI */
-  var PH = "data:image/svg+xml," + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0f3a4d"/><stop offset="1" stop-color="#061219"/></linearGradient></defs><rect width="800" height="500" fill="url(#g)"/><path d="M0,330 C150,300 250,370 400,340 C550,310 650,380 800,350 L800,500 L0,500 Z" fill="rgba(47,214,194,0.10)"/><path d="M0,380 C150,350 250,420 400,390 C550,360 650,430 800,400 L800,500 L0,500 Z" fill="rgba(47,214,194,0.14)"/><circle cx="640" cy="120" r="46" fill="rgba(47,214,194,0.12)"/></svg>');
+  var PH = "data:image/svg+xml," + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0a4d6e"/><stop offset="1" stop-color="#03141c"/></linearGradient></defs><rect width="800" height="500" fill="url(#g)"/><path d="M0,330 C150,300 250,370 400,340 C550,310 650,380 800,350 L800,500 L0,500 Z" fill="rgba(46,200,184,0.10)"/><path d="M0,380 C150,350 250,420 400,390 C550,360 650,430 800,400 L800,500 L0,500 Z" fill="rgba(46,200,184,0.14)"/><path d="M560 150c28-18 56-16 80 4 16-8 32-4 40 8-12 6-20 8-32 4-4 12-20 20-40 16-20 4-36-4-44-16-4 4-12 4-16 0 8-4 12-8 12-16z" fill="rgba(58,212,197,0.16)"/></svg>');
 
   function card(a, featured) {
     var cover = a.cover ? root + a.cover : PH;
